@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 class Library():
 
@@ -20,6 +21,9 @@ class Frontend():
 
     def show_web(self):
         st.title("Library Management System")
+
+        df = pd.read_csv("data.csv", sep=";")
+        st.table(df)
 
 if __name__ == "__main__":
     frontend = Frontend()
