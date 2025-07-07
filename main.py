@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+from collections import Counter
+import matplotlib.pyplot as plt
 
 class Library():
 
@@ -8,12 +10,9 @@ class Library():
 
     def add_books(self, get_title, get_genre, get_author, get_status):
         with open(self.file, "a", newline="") as file:
-            file.write(f"\n{get_title};{get_genre};{get_author};{get_status}\n")
+            file.write(f"{get_title};{get_genre};{get_author};{get_status}\n")
 
-    def delete_books(self):
-        pass
-
-    def show(self):
+    def edit_cell(self):
         pass
 
 class Frontend():
@@ -32,7 +31,7 @@ class Frontend():
 
     def show_form(self):
 
-        genre = ["Fiction", "Non-Fiction", "Fantasy", "Mystery", "Romance", "Biography", "Self-Help"]
+        genre = ["Fiction", "Non-Fiction", "Fantasy", "Mystery", "Romance", "Biography", "Self-Help", "Education"]
         progress = ["Complete", "Unread", "In Progress"]
 
         if "library" not in st.session_state:
@@ -54,8 +53,34 @@ class Frontend():
 
                 st.session_state.library.add_books(add_title, add_genre, add_author, add_status)
 
+        st.divider()
+
+    def show_graph(self):
+        list_status = self.df["Status"]
+        counts = dict(Counter(list_status))
+        col1, col2 = st.columns([3,1])
+
+        with col1:
+            labels = list(counts.keys())
+            values = list(counts.values())
+
+            fig, ax = plt.subplots()
+            ax.pie(values, labels=labels, autopct='%1.1f%%')
+
+            st.pyplot(fig)
+
+        with col2:
+            st.write("Complete:")
+            st.subheader(counts.get('Complete'))
+            st.write("Unread:")
+            st.subheader(counts.get('Unread'))
+            st.write("In Progress:")
+            st.subheader(counts.get('In Progress'))
+
+
 if __name__ == "__main__":
     frontend = Frontend()
 
     frontend.show_web()
     frontend.show_form()
+    frontend.show_graph()
