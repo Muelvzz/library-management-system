@@ -1,0 +1,70 @@
+.dashboard-container {
+    color: gray;
+}
+
+.dashboard-first-tab {
+    display: flex;
+    list-style-type: none;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    gap: 5rem;
+}
+
+.dashboard-first-tab li:first-child{
+    font-weight: bolder;
+}
+
+.dashboard-first-tab li:nth-child(3){
+    font-weight: bolder;
+}
+
+.dashboard-second-tab {
+    display: flex;
+    list-style-type: none;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    gap: 3rem;
+}
+
+.book-container {
+    background-color: grey;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    width: 78vw;
+    height: 73.5vh;
+    color: white;
+    overflow-y: scroll;
+}
+
+.book {
+    display: flex;
+    margin-left: 1rem;
+    padding-bottom: 1.5rem;
+    margin-right: 3rem;
+}
+
+.book:first-child {
+    padding-top: 1.8rem;
+}
+
+.book img {
+    width: 12vw;
+    height: 30vh;
+    margin-left: 2rem;
+    border-radius: 1rem;
+}
+
+.book-content {
+    margin-left: 1rem;
+}
+
+.book-content p {
+    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.book-content p {
+    text-align: justify;
+}

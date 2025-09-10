@@ -1,0 +1,44 @@
+nav {
+  align-items: center;
+  background: #566A9D;
+  width: 100%;
+  height: 10vh;
+  border-bottom: white solid;
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  color: white;
+  font-weight: Bold;
+  font-size: 1.3rem;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+nav ul li {
+  padding-top: 1.2rem;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+  margin-left: 0.5rem;
+  padding-top: 0.8rem;
+}
+
+nav ul li:nth-child(2) {
+  font-size: 1.9rem;
+  padding-top: 0.8rem;
+}
+
+nav ul li:last-child {
+  margin-left: auto;
+  margin-right: 2rem;
+  font-size: 1.1rem;
+}
+
+nav img {
+  width: 2rem;
+  margin-left: 1.5rem;
+}

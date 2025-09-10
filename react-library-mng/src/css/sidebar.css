@@ -1,0 +1,39 @@
+.sidebar-container {
+    width: 20%;
+    height: 90vh;
+    background: #566A9D;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    color:white;
+}
+
+.sidebar-welcome-text {
+    text-align: center;
+}
+
+.sidebar-tabs-list {
+    list-style: none;
+    line-height: 3rem;
+    font-size: 1.2rem;
+}
+
+.sidebar-tabs h2 {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-profile {
+    border-radius: 50%;
+    width: 7rem;
+}
+
+.sidebar-profile{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-tabs-logo {
+    width: 1rem;
+    margin-right: 0.5rem;
+    align-items: center;
+}
